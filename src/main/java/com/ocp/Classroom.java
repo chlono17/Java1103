@@ -22,6 +22,8 @@ public class Classroom {
         double s2_bmi = s2.weight / Math.pow(s2.height/100, 2);
         System.out.printf("%s的BMI:%.2f\n",s1.name,s1_bmi);
         System.out.printf("%s的BMI:%.2f\n",s2.name,s2_bmi);
+        //teacher: https://github.com/vincenttuan/Java1103
+    
     }
  
 }
