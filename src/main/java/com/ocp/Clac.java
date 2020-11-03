@@ -1,6 +1,7 @@
 package com.ocp;
 
 public class Clac {
+
     public static void main(String[] args) {
         Area a1 = new Area();
         a1.h = 100;
@@ -12,8 +13,8 @@ public class Clac {
         System.out.println(sum);
         //-------------------------------------------
         BMI bmi = new BMI();
-        bmi.h =170.0;
-        bmi.w =60.0;
+        bmi.h = 170.0;
+        bmi.w = 60.0;
         double b1 = bmi.calc();
         double b2 = bmi.calc(1);
         double b3 = bmi.calc(2);
