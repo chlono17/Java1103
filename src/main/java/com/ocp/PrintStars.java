@@ -13,6 +13,14 @@ public class PrintStars {
          */
 
         for (int i = 1; i <= line; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+
+        //homework
+        for (int i = 1; i <= line; i++) {
             for (int j = 6; j >= i; j--) {
                 System.out.print(" ");
 
