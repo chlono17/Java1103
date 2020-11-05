@@ -64,5 +64,6 @@ public class ATM {
             System.out.println("按下enter鑑後繼續. . . ");
             new Scanner(System.in).nextLine();
         } while (true);
+        
     }
 }
