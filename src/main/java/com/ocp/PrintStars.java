@@ -4,8 +4,9 @@ public class PrintStars {
 
     public static void main(String[] args) {
         int line = 7;
-        /*利用for
-        print:  *
+        /* 利用for
+        print: 
+                *
                 **
                 ***
                 ****
@@ -20,7 +21,8 @@ public class PrintStars {
         }
 
         //homework
-        for (int i = 1; i <= line+1; i++) {
+       
+        for (int i = 1; i <= line + 1; i++) {
             for (int j = line; j >= i; j--) {
                 System.out.print(" ");
             }
@@ -29,8 +31,6 @@ public class PrintStars {
             }
             System.out.println("");
         }
-        
-        
 
         //pro ver
         /*
@@ -43,14 +43,31 @@ public class PrintStars {
         **
         *
         
-        */
-        int m = (int)(Math.ceil(line/2.0));
-        for (int i = 1; i < line; i++) {
-            for (int j = 1; j < m; j++) {
-                System.out.print("*");
+         */
+        
+        int m = (int) (Math.ceil(line / 2.0));
+        int x = 1;
+        for (int i = 1; i <= line; i++) {
+            if (x <= m) {
+                for (int j = 1; j <= m; j++) {
+                    for (int k = 1; k <= j; k++) {
+                        System.out.print("*");
+                    }
+                    System.out.println("");
+                    if (x >= m) {
+                        for (int k = m-1; k >= 1; k--) {
+                            for (int l = 1; l <= k; l++) {
+                                System.out.print("*");
+                            }
+                            System.out.println("");
+                        }
+                    }
+                    x++;
+                }
             }
-            System.out.println("");
         }
+    
+    
     }
 
 }
