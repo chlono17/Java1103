@@ -16,7 +16,7 @@ public class RandomNumber {
         }
         return nums;
     }
-
+    
     public static boolean isExist(int[] nums, int n) {
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == n) {
