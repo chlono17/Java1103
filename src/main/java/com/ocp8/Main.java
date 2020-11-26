@@ -12,7 +12,7 @@ public class Main {
         Transportation[] trans = rc.getTransportations();
         System.out.println("目前庫存:" + Arrays.toString(trans));
         //租一台車
-        int price = 0;
+        int subtotal = 0;
         for (Transportation ts : trans) {
             if (ts instanceof Car) {
                 Car car = (Car) ts;
@@ -20,7 +20,7 @@ public class Main {
                 int amount = ts.getAmount();
                 amount = amount - 1;
                 ts.setAmount(amount);
-                price += ts.getPrice()*1;
+                subtotal += ts.getPrice()*1;
                 
             }
             if (ts instanceof Bicycle) {
@@ -28,7 +28,7 @@ public class Main {
                 int amount = ts.getAmount();
                 amount = amount - 3;
                 ts.setAmount(amount);
-                 price += ts.getPrice()*3;
+                 subtotal += ts.getPrice()*3;
 
             } 
             if (ts instanceof Airplane) {
@@ -36,13 +36,13 @@ public class Main {
                 int amount = ts.getAmount();
                 amount = amount - 1 ;
                 ts.setAmount(amount);
-                 price += ts.getPrice()*1;
+                 subtotal += ts.getPrice()*2;
 
             }
         }
         //更新後的庫存資料
         System.out.println("更新後庫存:" + Arrays.toString(trans));
         //總租金是多少
-        System.out.println(price);
+        System.out.printf("總租金:%,d\n",subtotal);
     }
 }
