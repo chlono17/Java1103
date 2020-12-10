@@ -75,6 +75,7 @@ public class PetService {
         for (Pet pet : pets) {
             if (p == null) {
                 p =pet;
+                
             }
             if(pet.getPrice() > p.getPrice()){
                 p = pet;
