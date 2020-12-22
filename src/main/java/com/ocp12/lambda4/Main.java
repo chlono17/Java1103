@@ -1,7 +1,6 @@
 package com.ocp12.lambda4;
 
 import java.util.function.Consumer;
-
 /*
 Consumer
 -接受一個引數,然後處理後不傳回值
