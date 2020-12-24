@@ -6,7 +6,11 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class SetDemo {
-
+/*
+    set{    HashSet
+       {    LinkedHashSet   有順序
+       {    TreeSet     有順序有排序
+ */    
     public static void main(String[] args) {
         Set set = new HashSet();    //特性:元素之間的擺放是按照Hashcode來決定,提高元素查詢的速率
         set.add("國文");//String

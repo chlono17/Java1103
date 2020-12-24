@@ -3,7 +3,7 @@ package com.ocp13;
 import com.github.javafaker.Faker;
 import java.util.Random;
 
-public class Exam {
+public class Exam implements Comparable<Exam>{
     private String name;    
     private int chinese;    
     private int english;
@@ -63,6 +63,13 @@ public class Exam {
     @Override
     public String toString() {
         return "Exam{" + "name=" + name + ", chinese=" + chinese + ", english=" + english + ", math=" + math + ", sex=" + sex + '}';
+    }
+
+    @Override
+    public int compareTo(Exam o) {
+        int sum = o.chinese + o.english + o.math;
+        int sum2 = chinese + english + math;  
+        return sum -  sum2;
     }
 
    
