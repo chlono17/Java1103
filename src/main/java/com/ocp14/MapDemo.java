@@ -19,5 +19,10 @@ public class MapDemo {
         for (String key : map.keySet()) {
             System.out.println(key + " 分數:" + map.get(key));
         }
+        
+        //java 8
+        map.entrySet().forEach(e ->System.out.println(e.getKey() + " = " + e.getValue()));
+        int sum = map.entrySet().stream().mapToInt(e -> e.getValue()).sum();
+        System.out.println(sum);
     }
 }

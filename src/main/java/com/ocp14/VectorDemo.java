@@ -18,3 +18,22 @@ public class VectorDemo {
         System.out.println(v);
     }
 }
+/*
+                HashSet         TreeSet     (不重複)
+{新增           
+{修改               O
+{刪除       
+
+查詢                                O             (O)優勢
+--------------------------------------------------------
+                LinkedList      Vector      ArrayList
+{新增
+{修改                O
+{刪除
+
+查詢                                              O
+
+{synchronized
+{支援多執行緒                        O
+{安全                                             (O)優勢
+*/
