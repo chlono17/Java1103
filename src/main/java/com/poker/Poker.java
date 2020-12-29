@@ -15,8 +15,8 @@ public class Poker {
 
     public Poker(double score, String color) {
 
-        if (color.equalsIgnoreCase("red")) {
-            this.color = "\u001B[31m";
+        if (color.equalsIgnoreCase("red")) {//顏色是否為紅色
+            this.color = "\u001B[31m";  //顏色設為紅色
         }
         if (score == 1) {
             name = "A";

@@ -10,6 +10,7 @@ public class ListDemo {
         List<Integer> scores = new LinkedList<>();
         for (int i = 0; i < 10; i++) {
             scores.add(new Random().nextInt(11));
+            System.out.println(scores);
         }
         System.out.println(scores);
         //排序
