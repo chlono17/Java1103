@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class ExceptionDemo3 {
     public static void main(String[] args) throws FileNotFoundException {
-        File file = new File("src\\main\\java\\com\\ocp16\\nember2.txt");
+        File file = new File("src\\main\\java\\com\\ocp16_exception\\nember2.txt");
 //        try {
 //            Scanner sc = new Scanner(file);
 //             System.out.println("找到檔案了");

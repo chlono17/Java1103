@@ -18,7 +18,7 @@ public class CallStack {
     }
     
     public static void openFile() throws FileNotFoundException {
-        File file = new File("src\\main\\java\\com\\ocp16\\nember2.txt");
+        File file = new File("src\\main\\java\\com\\ocp16_exception\\nember2.txt");
         Scanner sc = new Scanner(file);
     }
     
