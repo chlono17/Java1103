@@ -2,10 +2,9 @@ package com.ocp23_cyclicbarrier;
 
 import java.util.Random;
 import java.util.concurrent.CyclicBarrier;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
-public class Car implements Runnable {
+
+public class Car extends Thread {
 
     private CyclicBarrier cb;
 
@@ -17,11 +16,15 @@ public class Car implements Runnable {
         try {
             Thread.sleep(new Random().nextInt(5000));
             System.out.printf("%s到台中了\n", name);
-            cb.wait();  //等待其他人
-            System.out.printf("%s繼續往高雄前進", name);
+            cb.await();  //等待其他人
+            System.out.printf("%s繼續往高雄前進\n", name);
             Thread.sleep(new Random().nextInt(5000));
-        } catch (InterruptedException ex) {}
-        System.out.printf("%s 到高雄了", name);
+        } catch (Exception ex) {}
+        System.out.printf("%s 到高雄了\n", name);
+    }
+
+    public Car(CyclicBarrier cb) {
+        this.cb = cb;
     }
 
 }
