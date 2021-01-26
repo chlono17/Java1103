@@ -12,7 +12,7 @@ public class JobMain {
         service.submit(new Job());
         service.submit(new LongJob());
         service.submit(new ShortJob());
-        service.shutdown();
+        service.shutdown();        
         System.out.println("shutdown...");
         //監測執行緒的執行狀況
         while(!service.awaitTermination(1, TimeUnit.SECONDS)){

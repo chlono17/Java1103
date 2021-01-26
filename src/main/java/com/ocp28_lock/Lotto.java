@@ -1,0 +1,33 @@
+package com.ocp28_lock;
+
+import java.util.Date;
+import java.util.Random;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class Lotto implements Runnable {
+
+    private String name;
+    private static final ReentrantLock lock = new ReentrantLock();
+
+    public Lotto(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void run() {
+        try {
+            lock.lock();//嘗試取得鎖
+            //要連續取的五組樂透號碼
+            for (int i = 1; i <= 5; i++) {
+                Thread.sleep(1000); //模擬要花費的時間
+                int n = new Random().nextInt(100);
+                System.out.printf("%s得到 %d, %s\n",name , n ,new Date().toString());
+            }
+            
+        } catch (Exception e) {
+        }finally{
+            lock.unlock();  //釋放鎖
+        }
+    }
+
+}
