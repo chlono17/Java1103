@@ -1,8 +1,16 @@
 package com.ocp;
 
+import java.util.Random;
+
 public class PrintStars {
 
     public static void main(String[] args) {
+        Random r = new Random();
+        int a = r.nextInt(100);
+        int s = r.nextInt(100);
+        System.out.println(s);
+        System.out.println(a);
+        
         int line = 7;
         /* 利用for
         print: 
