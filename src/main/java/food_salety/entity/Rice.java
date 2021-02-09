@@ -3,9 +3,15 @@ package food_salety.entity;
 public class Rice {
     private int id;
 
+    public int getId() {
+        return id;
+    }
+
     public void setId(int id) {
         this.id = id;
     }
+
+    
     private String Title;
     private String 編號;
     private String 品名;
