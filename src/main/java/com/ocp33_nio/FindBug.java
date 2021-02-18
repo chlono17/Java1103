@@ -14,6 +14,7 @@ public class FindBug {
                 .parallel()
                 .peek(s -> System.out.println(s))
                 .filter(s -> s.contains("bug"))
+//              .sequential()
                 .findFirst();
         System.out.println(opt.isPresent());
     }
